@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#211714">
+  <title>Xaelzin Folder — Minecraft Shaders & Modpacks</title>
+  <meta name="description" content="Xaelzin Folder — подборка шейдеров, модпаков и текстур для Minecraft.">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#1c1412;--panel:#271c19;--panel2:#30221e;--line:rgba(238,211,194,.09);--text:#f0e2d8;--muted:#a9958a;--accent:#e45a32;--accent2:#ff865a;--shadow:0 22px 65px rgba(0,0,0,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#3a241d 0,transparent 32%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden;transition:background .25s,color .25s}
+.ambient{position:fixed;width:280px;height:280px;filter:blur(100px);opacity:.1;pointer-events:none;z-index:-1;background:#f05d31;border-radius:50%}.ambient-one{top:28%;left:-180px}.ambient-two{right:-190px;top:65%;background:#a34b30}
+.topbar{height:88px;max-width:1100px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font:700 21px Manrope,sans-serif;letter-spacing:-.7px}.brand b{color:#cbb6a9}.brand-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#ff8959,#c63e20);box-shadow:0 7px 20px #d94b2b30;color:#fff;font:800 20px Manrope}
+.top-actions{display:flex;gap:10px}.icon-btn,.language-btn,.tool-btn,.view-btn,.read-btn{border:1px solid var(--line);color:var(--text);background:var(--panel2);border-radius:14px;cursor:pointer;transition:.2s}.icon-btn{height:46px;width:48px;font-size:23px}.language-btn{padding:0 17px;display:flex;gap:9px;align-items:center;font:500 14px 'DM Sans'}.language-btn span:first-child{font-size:19px}.icon-btn:hover,.language-btn:hover,.tool-btn:hover,.read-btn:hover{border-color:#a9563b}
+.page-wrap{max-width:1100px;margin:32px auto 0;padding:0 28px}.panel{background:linear-gradient(135deg,rgba(52,36,31,.93),rgba(38,27,24,.93));border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
+.profile{padding:23px 25px;margin-bottom:20px}.profile-row,.support-row{display:flex;align-items:center;gap:15px}.avatar{width:53px;height:53px;border-radius:18px;background:linear-gradient(140deg,#f0c5a4,#783b2b);display:grid;place-items:center;color:#2a1915;font:800 25px Manrope;box-shadow:inset 0 0 0 1px #ffffff20}.profile-copy{flex:1}.profile-copy h1{margin:0 0 3px;font:700 18px Manrope;letter-spacing:-.4px}.verified{color:var(--accent2);font-size:17px}.profile-copy p{margin:0;color:var(--muted);font-size:13px}.arrow-link{font-size:26px;color:var(--accent);text-decoration:none;padding:0 4px}.support-row{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);text-decoration:none;color:inherit}.heart{height:43px;width:43px;display:grid;place-items:center;border-radius:15px;background:#3a2520;color:#f1c0aa;font-size:28px}.support-copy{flex:1;display:flex;flex-direction:column;gap:3px}.support-copy strong{font-size:15px;font-weight:600}.support-copy small{font-size:12px;color:var(--muted)}
+.notice{padding:20px 22px;display:flex;align-items:flex-start;gap:15px;border-left:3px solid #d6b8a5;margin-bottom:42px}.notice-icon{width:28px;height:28px;border:2px solid #d6b8a5;color:#d6b8a5;border-radius:50%;display:grid;place-items:center;font-weight:700;flex-shrink:0}.notice-text{flex:1}.notice-text strong{display:block;margin:2px 0 7px;font-weight:600}.notice-text p{margin:0;color:var(--muted);font-size:13px;line-height:1.55;max-width:650px}.read-btn{padding:10px 13px;white-space:nowrap;font-size:12px}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:19px}.eyebrow{font-size:10px;letter-spacing:2.5px;color:var(--accent2);font-weight:700}.section-heading h2{font:700 27px Manrope;margin:7px 0 0;letter-spacing:-1px}.count-pill{font-size:12px;color:#d8bdb0;border:1px solid var(--line);background:#2a1e1b;padding:8px 12px;border-radius:99px}
+.searchbox{height:56px;border:1px solid var(--line);background:rgba(40,29,26,.78);border-radius:17px;display:flex;align-items:center;gap:13px;padding:0 17px;margin-bottom:12px;color:var(--muted)}.searchbox>span{font-size:27px;line-height:1}.searchbox input{width:100%;border:0;outline:0;background:transparent;color:var(--text);font:14px 'DM Sans'}.searchbox input::placeholder{color:#8e7c73}.searchbox:focus-within{border-color:#a9563b;box-shadow:0 0 0 3px #e45a3212}.searchbox kbd{font-size:11px;border:1px solid var(--line);border-radius:5px;padding:3px 7px;color:var(--muted)}
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin:12px 0 18px}.tool-btn{padding:11px 14px;font:500 13px 'DM Sans'}.view-toggle{display:flex;gap:5px;background:#261b18;border:1px solid var(--line);border-radius:12px;padding:4px}.view-btn{width:34px;height:31px;border:0;background:transparent;color:var(--muted);font-size:18px;border-radius:8px}.view-btn.active{background:#493027;color:#fff}
+.tabs{display:flex;gap:8px;margin-bottom:18px;overflow:auto;padding-bottom:2px}.tab{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:12px;padding:10px 14px;white-space:nowrap;font:500 12px 'DM Sans';cursor:pointer}.tab span{margin-left:6px;font-size:10px;opacity:.65}.tab.active{background:#503126;border-color:#70402f;color:#ffe8dc}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.file-card{display:flex;gap:15px;padding:16px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,rgba(49,35,30,.95),rgba(37,27,24,.96));min-width:0;transition:transform .2s,border-color .2s,background .2s}.file-card:hover{transform:translateY(-3px);border-color:#87513b;background:#33231e}.file-art{width:88px;height:88px;flex-shrink:0;border-radius:16px;display:grid;place-items:center;position:relative;overflow:hidden;color:#fff;font:800 22px Manrope;letter-spacing:-1px;background:linear-gradient(140deg,#5d7d7b,#e8b37d 55%,#4a4c3e)}.file-art:before,.file-art:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}.file-art:before{width:80px;height:80px;left:-20px;bottom:-35px;background:#1d3c3a99}.file-art:after{width:54px;height:54px;right:-13px;top:-14px;background:#fff4d455}.file-art span{z-index:1;text-shadow:0 2px 8px #0007}.file-art.bliss{background:linear-gradient(150deg,#95b7d7,#586b8b 48%,#d8d4c7)}.file-art.ember{background:linear-gradient(150deg,#f5a66c,#8b3827 55%,#2c1c20)}.file-art.forest{background:linear-gradient(150deg,#a5c5a1,#45634f 50%,#1e302a)}.file-art.purple{background:linear-gradient(150deg,#c4a4e4,#5c497e 55%,#28233f)}.file-art.blue{background:linear-gradient(150deg,#92d2e4,#3e738c 55%,#202c46)}.file-content{min-width:0;flex:1;display:flex;flex-direction:column}.file-content h3{font:600 15px Manrope;margin:2px 0 8px;line-height:1.35;letter-spacing:-.2px}.meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.tag{font-size:10px;color:#d8bdb0;background:#3b2a25;border:1px solid #ffffff06;padding:5px 8px;border-radius:99px}.file-content p{font-size:11px;color:var(--muted);line-height:1.45;margin:0 0 12px}.card-bottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}.version{font-size:10px;color:#9b887e}.download-btn{background:#d94f2b;color:white;text-decoration:none;border:0;border-radius:10px;padding:8px 11px;font:600 11px 'DM Sans';white-space:nowrap;cursor:pointer}.download-btn:hover{background:#f16b43}.cards.list{grid-template-columns:1fr}.cards.list .file-card{align-items:center}.cards.list .file-art{width:66px;height:66px}.cards.list .file-content p{max-width:600px}.empty-state{text-align:center;padding:50px 15px;color:var(--muted)}.empty-state>span{font-size:35px}.empty-state h3{color:var(--text);margin:12px 0 5px}.empty-state p{font-size:13px}.footnote{text-align:center;color:#806e65;font-size:11px;margin:35px 0 28px}.footnote span{color:var(--accent);padding:0 7px}footer{max-width:1100px;margin:0 auto;padding:22px 28px 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#8c786e;font-size:11px}footer b{color:var(--accent);margin-left:5px}
+body.light{--bg:#eee4dc;--panel:#fff9f4;--panel2:#f5e9df;--line:rgba(78,48,34,.14);--text:#34231d;--muted:#8d766a;--shadow:0 20px 50px #55301b12;background:radial-gradient(ellipse at 85% 0%,#e9c7b2 0,transparent 32%),var(--bg)}body.light .panel,body.light .file-card{background:linear-gradient(135deg,#fff9f4,#f5e9df)}body.light .searchbox,body.light .count-pill,body.light .view-toggle{background:#f5e9df}body.light .tab.active{color:#562b1d;background:#ead0c0}body.light .tag{background:#eadbd1;color:#6f5042}body.light .view-btn.active{background:#e4c3ae;color:#45271b}
+@media(max-width:680px){.topbar{height:74px;padding:0 18px}.brand{font-size:18px;gap:9px}.brand-mark{width:34px;height:34px}.language-btn{padding:0 11px;font-size:12px}.icon-btn{height:42px;width:42px}.page-wrap{padding:0 15px;margin-top:20px}.profile{padding:18px;border-radius:22px}.notice{margin-bottom:32px;padding:17px 15px;gap:11px}.read-btn{padding:8px;font-size:11px}.section-heading h2{font-size:23px}.cards{grid-template-columns:1fr;gap:10px}.file-card{padding:13px;border-radius:18px;gap:12px}.file-art{width:76px;height:80px;border-radius:14px}.file-content h3{font-size:14px}.file-content p{font-size:10px}.toolbar{margin-bottom:14px}.tool-btn{font-size:11px;padding:10px}.tabs{gap:6px}.tab{padding:10px 11px}footer{padding:20px 17px 26px;font-size:10px}.count-pill{font-size:10px}.profile-copy h1{font-size:16px}.support-copy strong{font-size:14px}.support-copy small{font-size:11px}}
+  </style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Xaelzin Folder home">
+      <span class="brand-mark">X</span><span>Xaelzin <b>Folder</b></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Переключить тему" title="Переключить тему">☾</button>
+      <button class="language-btn" id="langToggle"><span>◎</span> <span id="langLabel">Русский</span></button>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="profile panel">
+      <div class="profile-row">
+        <div class="avatar">X</div>
+        <div class="profile-copy"><h1>Xaelzin Folder <span class="verified">✦</span></h1><p id="subtitle">Твоя коллекция Minecraft-файлов</p></div>
+        <a class="arrow-link" href="#files" aria-label="Перейти к файлам">↗</a>
+      </div>
+      <a class="support-row" href="https://github.com/" target="_blank" rel="noreferrer">
+        <span class="heart">♡</span><span class="support-copy"><strong id="supportTitle">Поддержать проект</strong><small id="supportSub">Следи за обновлениями на GitHub →</small></span><span class="arrow-link">↗</span>
+      </a>
+    </section>
+
+    <section class="notice panel">
+      <div class="notice-icon">i</div>
+      <div class="notice-text"><strong id="noticeTitle">Информация</strong><p id="noticeBody">Файлы добавляются владельцем сайта. Перед установкой проверь совместимость с версией Minecraft.</p></div>
+      <button class="read-btn" id="noticeToggle">Свернуть⌃</button>
+    </section>
+
+    <section id="files" class="library">
+      <div class="section-heading"><div><span class="eyebrow">LIBRARY / 01</span><h2 id="libraryTitle">Библиотека файлов</h2></div><span class="count-pill" id="fileCount">6 файлов</span></div>
+      <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Поиск шейдеров и модпаков..." aria-label="Поиск файлов"><kbd>/</kbd></label>
+      <div class="toolbar">
+        <button class="tool-btn" id="sortBtn">☷ <span id="sortLabel">Сортировка: A–Я</span></button>
+        <div class="view-toggle"><button class="view-btn active" data-view="grid" aria-label="Сетка">▦</button><button class="view-btn" data-view="list" aria-label="Список">☰</button></div>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-category="all" id="tabAll">Все файлы <span>06</span></button>
+        <button class="tab" data-category="shaders" id="tabShaders">✧ Шейдеры <span>03</span></button>
+        <button class="tab" data-category="modpacks" id="tabModpacks">⬡ Модпаки <span>03</span></button>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>Ничего не найдено</h3><p>Попробуй изменить поисковый запрос.</p></div>
+      <p class="footnote">Xaelzin Folder <span>·</span> Неофициальная фанатская библиотека Minecraft</p>
+    </section>
+  </main>
+  <footer><span>© <span id="year"></span> Xaelzin Folder</span><span>Made for the blocky world <b>◆</b></span></footer>
+  <script>
+const files = [
+ {name:"Aurora Reimagined",category:"shaders",className:"",mark:"AR",creator:"Xaelzin",version:"Minecraft 1.20–1.21",desc:"Мягкое освещение, выразительные тени и атмосферные закаты.",url:"",date:6},
+ {name:"Bliss Visuals",category:"shaders",className:"bliss",mark:"BLISS",creator:"Xaelzin",version:"Java Edition",desc:"Кинематографичные облака и красивые пейзажи.",url:"",date:5},
+ {name:"Ember Lite",category:"shaders",className:"ember",mark:"EMBER",creator:"Xaelzin",version:"Bedrock / совместимые сборки",desc:"Лёгкий тёплый визуальный стиль для повседневной игры.",url:"",date:4},
+ {name:"Cozy Survival Pack",category:"modpacks",className:"forest",mark:"CSP",creator:"Xaelzin",version:"Minecraft 1.20.1",desc:"Уютное выживание с полезными улучшениями и атмосферой.",url:"",date:3},
+ {name:"Beyond Blocks",category:"modpacks",className:"purple",mark:"BB",creator:"Xaelzin",version:"Minecraft 1.20.1",desc:"Набор модов для исследования, строительства и приключений.",url:"",date:2},
+ {name:"Performance Essentials",category:"modpacks",className:"blue",mark:"PE",creator:"Xaelzin",version:"Разные версии",desc:"Подборка оптимизаций для более плавной игры.",url:"",date:1}
+];
+let category="all", sortAsc=true, listView=false, english=false, noticeHidden=false;
+const $=s=>document.querySelector(s);
+const cards=$("#cards");
+function render(){
+ const q=$("#search").value.trim().toLowerCase();
+ let items=files.filter(f=>(category==="all"||f.category===category)&&(`${f.name} ${f.creator} ${f.desc} ${f.version}`.toLowerCase().includes(q)));
+ items.sort((a,b)=>sortAsc?a.name.localeCompare(b.name):b.date-a.date);
+ cards.classList.toggle("list",listView);
+ cards.innerHTML=items.map(f=>`<article class="file-card">
+   <div class="file-art ${f.className}"><span>${f.mark}</span></div>
+   <div class="file-content"><h3>${f.name}</h3><div class="meta"><span class="tag">${f.category==="shaders"?(english?"Shader":"Шейдер"): (english?"Modpack":"Модпак")}</span><span class="tag">${english?"By":"Автор"}: ${f.creator}</span></div>
+   <p>${f.desc}</p><div class="card-bottom"><span class="version">${f.version}</span><a class="download-btn" href="${f.url||'#'}" ${f.url?'target="_blank" rel="noreferrer"':''} data-name="${f.name}">${english?"Get file":"Скачать"} ↗</a></div></div>
+ </article>`).join("");
+ $("#emptyState").hidden=items.length>0;
+ $("#fileCount").textContent=english?`${items.length} files`:`${items.length} файл${items.length===1?"":items.length<5?"а":"ов"}`;
+ cards.querySelectorAll(".download-btn").forEach(a=>a.addEventListener("click",e=>{if(!a.href||a.getAttribute("href").endsWith("#")){e.preventDefault();alert(english?`Add the real download URL for “${a.dataset.name}” in script.js.`:`Добавь настоящую ссылку на скачивание «${a.dataset.name}» в файле script.js.`)}}));
+}
+$("#search").addEventListener("input",render);
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{category=b.dataset.category;document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));render()}));
+$("#sortBtn").addEventListener("click",()=>{sortAsc=!sortAsc;$("#sortLabel").textContent=english?(sortAsc?"Sort: A–Z":"Sort: Newest"):(sortAsc?"Сортировка: A–Я":"Сортировка: новые");render()});
+document.querySelectorAll(".view-btn").forEach(b=>b.addEventListener("click",()=>{listView=b.dataset.view==="list";document.querySelectorAll(".view-btn").forEach(x=>x.classList.toggle("active",x===b));render()}));
+$("#themeToggle").addEventListener("click",()=>{document.body.classList.toggle("light");$("#themeToggle").textContent=document.body.classList.contains("light")?"☀":"☾"});
+$("#langToggle").addEventListener("click",()=>{english=!english;$("#langLabel").textContent=english?"English":"Русский";$("#subtitle").textContent=english?"Your Minecraft files collection":"Твоя коллекция Minecraft-файлов";$("#supportTitle").textContent=english?"Support the project":"Поддержать проект";$("#supportSub").textContent=english?"Follow updates on GitHub →":"Следи за обновлениями на GitHub →";$("#noticeTitle").textContent=english?"Information":"Информация";$("#noticeBody").textContent=english?"Files are managed by the site owner. Check Minecraft compatibility before installing.":"Файлы добавляются владельцем сайта. Перед установкой проверь совместимость с версией Minecraft." ;$("#libraryTitle").textContent=english?"File library":"Библиотека файлов";$("#search").placeholder=english?"Search shaders and modpacks...":"Поиск шейдеров и модпаков...";$("#sortLabel").textContent=english?(sortAsc?"Sort: A–Z":"Sort: Newest"):(sortAsc?"Сортировка: A–Я":"Сортировка: новые");$("#tabAll").innerHTML=english?"All files <span>06</span>":"Все файлы <span>06</span>";$("#tabShaders").innerHTML=english?"✧ Shaders <span>03</span>":"✧ Шейдеры <span>03</span>";$("#tabModpacks").innerHTML=english?"⬡ Modpacks <span>03</span>":"⬡ Модпаки <span>03</span>";render()});
+$("#noticeToggle").addEventListener("click",()=>{noticeHidden=!noticeHidden;$("#noticeBody").hidden=noticeHidden;$("#noticeToggle").textContent=noticeHidden?(english?"Read more⌄":"Читать⌄"):(english?"Collapse⌃":"Свернуть⌃")});
+document.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement.tagName!=="INPUT"){e.preventDefault();$("#search").focus()}if(e.key==="Escape")$("#search").blur()});
+$("#year").textContent=new Date().getFullYear();render();
+  </script>
+</body>
+</html>
